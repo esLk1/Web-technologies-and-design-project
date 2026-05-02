@@ -7,7 +7,51 @@
         <link rel="stylesheet" href="/css/style.css"/>
     </head>
     <body>
-
+    <header>
+        <h1>BECOME CREW MEMBER</h1>
+    </header>
+    <nav>
+        <a href="index.html">HOME</a>
+        <a href="spec.html">ABOUT</a>
+        <a href="signup.html">SIGNUP</a>
+        <a href="starbase.html">STARBASE</a>
+        <a href="galery.html">GALLERY</a>
+        <a href="missions.html">MISSIONS</a>
+    </nav>
+    <div class="container">
+        <main>
+            <h2 class="signup-header">SIGN UP</h2>
+            <form id="signup" novalidate>
+                <div class="form-group">
+                    <label for="name">FIRST NAME</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="rola">Role</label>
+                    <select id="rola" name="rola" required>
+                        <option value="">Select your desired role</option>
+                        <option value="engineer">Engineer</option>
+                        <option value="pilot">Pilot</option>
+                        <option value="commander">Commander</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="message">Why should we choose you</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="accept">Terms</label>
+                    <input type="checkbox" id="accept">
+                    <span>I accept that flying is dangerous.</span>
+                </div>
+                <button type="submit">LETS FLY</button>
+            </form>
+        </main>
+    </div>
 
     </body>
 </html>

@@ -58,3 +58,43 @@ article img {
     display: block;
     margin-bottom: 2rem;
 }
+
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+}
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    max-width: 800px;
+    padding: 10px;
+    background: #1a1d29;
+    color: #fff;
+    border-radius: 4px;
+}
+
+button {
+    background: darkblue;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+button:hover {
+    background: #00a8cc;
+}
+
+.signup-header {
+    color: darkblue;
+    font-size: 40px;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+}
