@@ -30,3 +30,29 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+
+main {
+    background-color: aliceblue;
+    color: black;
+    display: grid;
+    padding: 2rem;
+}
+
+.articles-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+
+img {
+    max-width: 80%;
+    height: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
