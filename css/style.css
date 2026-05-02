@@ -98,3 +98,28 @@ button:hover {
     margin-bottom: 2rem;
     text-transform: uppercase;
 }
+
+.radio-group {
+    display: flex;
+    gap: 1rem;
+    padding: 2rem 1rem;
+}
+
+.error {
+    color: red;
+    border-color: red;
+}
+
+.galery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.galery a img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+}
