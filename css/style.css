@@ -123,3 +123,20 @@ button:hover {
     object-fit: cover;
     border-radius: 5px;
 }
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    padding: 2rem;
+}
+
+.table th, .table td, #spectable th, #spectable td {
+    padding: 12px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+#spectable th {
+    background-color: #e0e0e0;
+    font-weight: bold;
+}

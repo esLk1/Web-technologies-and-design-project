@@ -1,0 +1,67 @@
+{
+  "spacex": {
+    "program": "Starship",
+    "vehicles": [
+      {
+        "id": "S28",
+        "name": "Ship 28",
+        "status": "Launched",
+        "specifications": {
+          "engines": {
+            "raptor": 3,
+            "raptor_vacuum": 3
+          },
+          "height": 50
+        }
+      },
+      {
+        "id": "S29",
+        "name": "Ship 29",
+        "status": "Launched",
+        "specifications": {
+          "engines": {
+            "raptor": 3,
+            "raptor_vacuum": 3
+          },
+          "height": 50
+        }
+      },
+      {
+        "id": "B10",
+        "name": "Booster 10",
+        "status": "Launched",
+        "specifications": {
+          "engines": {
+            "raptor": 33,
+            "raptor_vacuum": 0
+          },
+          "height": 71
+        }
+      },
+      {
+        "id": "S30",
+        "name": "Ship 30",
+        "status": "Scheduled for May",
+        "specifications": {
+          "engines": {
+            "raptor": 3,
+            "raptor_vacuum": 3
+          },
+          "height": 50
+        }
+      },
+      {
+        "id": "B11",
+        "name": "Booster 11",
+        "status": "Scheduled for May",
+        "specifications": {
+          "engines": {
+            "raptor": 33,
+            "raptor_vacuum": 0
+          },
+          "height": 71
+        }
+      }
+    ]
+  }
+}
