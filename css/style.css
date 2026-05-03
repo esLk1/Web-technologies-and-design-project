@@ -69,7 +69,9 @@ article img {
 }
 .form-group label {
     display: block;
-    margin-bottom: 8px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    font-weight: bold;
 }
 .form-group input[type="text"],
 .form-group input[type="email"],
@@ -81,13 +83,14 @@ article img {
     background: #1a1d29;
     color: #fff;
     border-radius: 4px;
+    border: 5px solid #1a1d29;
+    box-sizing: border-box;
 }
 
 input[type="checkbox"],
 input[type="radio"] {
     cursor: pointer;
 }
-
 
 button {
     background: darkblue;
@@ -108,12 +111,36 @@ button:hover {
     font-size: 40px;
     margin-bottom: 2rem;
     text-transform: uppercase;
+    text-align: center;
+}
+
+.signup-button {
+    background: darkblue;
+    color: white;
+    border: none;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 4px;
+    text-transform: uppercase;
+    margin: 20px auto 0;
+    display : block;
+}
+
+#signup{
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 5px black solid;
+    border-radius: 10px;
+    padding: 2rem;
 }
 
 .radio-group {
     display: flex;
     gap: 1rem;
     padding: 2rem 1rem;
+    font-weight: bold;
 }
 
 .error {
