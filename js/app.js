@@ -4,24 +4,11 @@ document.getElementById(`signup`).addEventListener(`submit`, e => {
     const form = e.target;
     let valid = true;
 
-    form.querySelectorAll(`.error`).forEach(el => el.classList.remove(`error`));
-
-    ["name", "email", "rola", "accept"].forEach(id => {
-        const input = form.querySelector("#" + id);
-        const wrapper = input.closest(`div`);
-
-        if (!input.checkValidity()) {
-            wrapper.classList.add(`error`);
-            valid = false;
-            }
-    });
-
     const missionchecked = form.querySelector('input[name="mission"]:checked');
     if (!missionchecked) {
         valid = false;
         form.querySelector('#mission1').closest('.radio-group').classList.add(`error`);
         document.getElementById("errorMission").textContent = "Choose only one";
-
     }
     else {
         document.getElementById("errorMission").textContent = "";
@@ -30,7 +17,11 @@ document.getElementById(`signup`).addEventListener(`submit`, e => {
 
     const emailcheck = form.email.value.trim();
     const emailregex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    if (!emailregex.test(emailcheck)) {
+    if (emailcheck === "") {
+        valid = false;
+        document.getElementById('erorEmail').textContent = 'Email address required.';
+        form.email.closest('div').classList.add(`error`);
+    } else if (!emailregex.test(emailcheck)) {
         valid = false;
         document.getElementById('erorEmail').textContent = 'Enter valid email address.';
         form.email.closest('div').classList.add(`error`);
@@ -43,7 +34,11 @@ document.getElementById(`signup`).addEventListener(`submit`, e => {
     const namesize = namecheck.split(' ').filter(part => part.length > 0);
     const numbercheck = /\d/;
 
-    if (numbercheck.test(namecheck)) {
+    if (namecheck === "") {
+        valid = false;
+        document.getElementById('erorName').textContent = 'Name is required';
+        form.name.closest('div').classList.add(`error`);
+    } else if (numbercheck.test(namecheck)) {
         valid = false;
         document.getElementById('erorName').textContent = 'Enter valid name and surname.';
         form.name.closest('div').classList.add(`error`);
@@ -54,6 +49,26 @@ document.getElementById(`signup`).addEventListener(`submit`, e => {
     } else {
         document.getElementById('erorName').textContent = '';
         form.name.closest('div').classList.remove(`error`);
+    }
+
+    if (!form.accept.checked) {
+        valid = false;
+        document.getElementById('errorTerms').textContent = 'I know its scary, but you need to accept';
+        form.accept.closest('div').classList.add(`error`);
+    }
+    else {
+        document.getElementById('errorTerms').textContent = '';
+        form.accept.closest('div').classList.remove(`error`);
+    }
+
+    if (form.rola.value === ""){
+        valid = false;
+        document.getElementById('errorRole').textContent = 'Please select role';
+        form.rola.closest('div').classList.add(`error`);
+    }
+    else {
+        document.getElementById('errorRole').textContent = '';
+        form.rola.closest('div').classList.remove(`error`);
     }
 
     if (valid) {
